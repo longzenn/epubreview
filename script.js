@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Kéo & thả file
     dropZone.addEventListener("dragover", (e) => {
         e.preventDefault();
-        dropZone.style.backgroundColor = "#ffe0ec";
+        dropZone.style.backgroundColor = "#faedcd";
     });
 
     dropZone.addEventListener("dragleave", () => {
-        dropZone.style.backgroundColor = "#fff5fa";
+        dropZone.style.backgroundColor = "#fefae0";
     });
 
     dropZone.addEventListener("drop", (e) => {
         e.preventDefault();
-        dropZone.style.backgroundColor = "#fff5fa";
+        dropZone.style.backgroundColor = "#fefae0";
         const file = e.dataTransfer.files[0];
         if (file) {
             fileInput.files = e.dataTransfer.files;
