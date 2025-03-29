@@ -1,0 +1,99 @@
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif ;
+    background-color: #ccd5ae;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h1 {
+    color: #87986a;
+}
+
+/* Khu vực kéo thả */
+#dropZone {
+    border: 2px dashed #87986a;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #fefae0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#dropZone:hover {
+    background-color: #faedcd;
+}
+
+#dropZone p {
+    margin: 0;
+    color: #87986a;
+    font-weight: bold;
+}
+
+/* Nút upload */
+#fileInput {
+    display: none;
+}
+
+.label-upload {
+    background-color: #87986a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.label-upload:hover {
+    background-color: #d08c60;
+}
+
+/* Metadata */
+#metadata {
+    display: none; /* Ẩn metadata khi chưa có file */
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff5fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.metadata-item {
+    margin: 8px 0;
+    padding: 8px;
+    border-bottom: 1px solid #ff99c8;
+}
+
+/* Nội dung EPUB */
+#epubPreview {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.cover {
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
