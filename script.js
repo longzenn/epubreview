@@ -1,6 +1,154 @@
-const encodedScript = "ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsIGZ1bmN0aW9uICgpIHsKICAgIGNvbnN0IGZpbGVJbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJmaWxlSW5wdXQiKTsKICAgIGNvbnN0IGRyb3Bab25lID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImRyb3Bab25lIik7CgogICAgZmlsZUlucHV0LmFkZEV2ZW50TGlzdGVuZXIoImNoYW5nZSIsIGhhbmRsZUZpbGVVcGxvYWQpOwoKICAgIC8vIEvDqW8gJiB0aOG6oyBmaWxlCiAgICBkcm9wWm9uZS5hZGRFdmVudExpc3RlbmVyKCJkcmFnb3ZlciIsIChlKSA9PiB7CiAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgICAgIGRyb3Bab25lLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICIjZmFlZGNkIjsKICAgIH0pOwoKICAgIGRyb3Bab25lLmFkZEV2ZW50TGlzdGVuZXIoImRyYWdsZWF2ZSIsICgpID0+IHsKICAgICAgICBkcm9wWm9uZS5zdHlsZS5iYWNrZ3JvdW5kQ29sb3IgPSAiI2ZlZmFlMCI7CiAgICB9KTsKCiAgICBkcm9wWm9uZS5hZGRFdmVudExpc3RlbmVyKCJkcm9wIiwgKGUpID0+IHsKICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgZHJvcFpvbmUuc3R5bGUuYmFja2dyb3VuZENvbG9yID0gIiNmZWZhZTAiOwogICAgICAgIGNvbnN0IGZpbGUgPSBlLmRhdGFUcmFuc2Zlci5maWxlc1swXTsKICAgICAgICBpZiAoZmlsZSkgewogICAgICAgICAgICBmaWxlSW5wdXQuZmlsZXMgPSBlLmRhdGFUcmFuc2Zlci5maWxlczsKICAgICAgICAgICAgaGFuZGxlRmlsZVVwbG9hZCh7IHRhcmdldDogZmlsZUlucHV0IH0pOwogICAgICAgIH0KICAgIH0pOwp9KTsKCmFzeW5jIGZ1bmN0aW9uIGhhbmRsZUZpbGVVcGxvYWQoZXZlbnQpIHsKICAgIGNvbnN0IGZpbGUgPSBldmVudC50YXJnZXQuZmlsZXNbMF07CiAgICBpZiAoIWZpbGUpIHJldHVybjsKCiAgICBjb25zdCB6aXAgPSBuZXcgSlNaaXAoKTsKICAgIGNvbnN0IGNvbnRlbnRzID0gYXdhaXQgemlwLmxvYWRBc3luYyhmaWxlKTsKICAgIAogICAgbGV0IG9wZlBhdGggPSAiIjsKICAgIGZvciAobGV0IGZpbGVuYW1lIGluIGNvbnRlbnRzLmZpbGVzKSB7CiAgICAgICAgaWYgKGZpbGVuYW1lLmVuZHNXaXRoKCIub3BmIikpIHsKICAgICAgICAgICAgb3BmUGF0aCA9IGZpbGVuYW1lOwogICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICB9CgogICAgaWYgKCFvcGZQYXRoKSB7CiAgICAgICAgYWxlcnQoIktow7RuZyB0w6xtIHRo4bqleSBtZXRhZGF0YSB0cm9uZyBFUFVCIG7DoHkhIik7CiAgICAgICAgcmV0dXJuOwogICAgfQoKICAgIGNvbnN0IG9wZkRhdGEgPSBhd2FpdCB6aXAuZmlsZShvcGZQYXRoKS5hc3luYygidGV4dCIpOwogICAgZXh0cmFjdE1ldGFkYXRhKG9wZkRhdGEsIHppcCk7CiAgICBkaXNwbGF5RXB1YkNvbnRlbnRzKHppcCk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGV4dHJhY3RNZXRhZGF0YSh4bWwsIHppcCkgewogICAgY29uc3QgcGFyc2VyID0gbmV3IERPTVBhcnNlcigpOwogICAgY29uc3QgeG1sRG9jID0gcGFyc2VyLnBhcnNlRnJvbVN0cmluZyh4bWwsICJhcHBsaWNhdGlvbi94bWwiKTsKCiAgICBjb25zdCB0aXRsZSA9IHhtbERvYy5nZXRFbGVtZW50c0J5VGFnTmFtZSgiZGM6dGl0bGUiKVswXT8udGV4dENvbnRlbnQgfHwgIktow7RuZyBjw7MgdGnDqnUgxJHhu4EiOwogICAgY29uc3QgYXV0aG9yID0geG1sRG9jLmdldEVsZW1lbnRzQnlUYWdOYW1lKCJkYzpjcmVhdG9yIilbMF0/LnRleHRDb250ZW50IHx8ICJLaMO0bmcgY8OzIHTDoWMgZ2nhuqMiOwogICAgY29uc3QgbGFuZ3VhZ2UgPSB4bWxEb2MuZ2V0RWxlbWVudHNCeVRhZ05hbWUoImRjOmxhbmd1YWdlIilbMF0/LnRleHRDb250ZW50IHx8ICJLaMO0bmcgcsO1IG5nw7RuIG5n4buvIjsKCiAgICAvLyBUw6xtIOG6o25oIGLDrGEgdHJvbmcgRVBVQgogICAgbGV0IGNvdmVyUGF0aCA9ICIiOwogICAgY29uc3QgbWV0YVRhZ3MgPSB4bWxEb2MuZ2V0RWxlbWVudHNCeVRhZ05hbWUoIm1ldGEiKTsKICAgIGZvciAobGV0IG1ldGEgb2YgbWV0YVRhZ3MpIHsKICAgICAgICBpZiAobWV0YS5nZXRBdHRyaWJ1dGUoIm5hbWUiKSA9PT0gImNvdmVyIikgewogICAgICAgICAgICBjb25zdCBjb3ZlcklkID0gbWV0YS5nZXRBdHRyaWJ1dGUoImNvbnRlbnQiKTsKICAgICAgICAgICAgY29uc3QgY292ZXJJdGVtID0geG1sRG9jLnF1ZXJ5U2VsZWN0b3IoYGl0ZW1baWQ9IiR7Y292ZXJJZH0iXWApOwogICAgICAgICAgICBpZiAoY292ZXJJdGVtKSBjb3ZlclBhdGggPSBjb3Zlckl0ZW0uZ2V0QXR0cmlidXRlKCJocmVmIik7CiAgICAgICAgICAgIGJyZWFrOwogICAgICAgIH0KICAgIH0KCiAgICAvLyBO4bq/dSBjw7Mg4bqjbmggYsOsYSwgaGnhu4NuIHRo4buLIG7DswogICAgbGV0IGNvdmVySW1hZ2UgPSAiIjsKICAgIGlmIChjb3ZlclBhdGgpIHsKICAgICAgICBmb3IgKGxldCBmaWxlbmFtZSBpbiB6aXAuZmlsZXMpIHsKICAgICAgICAgICAgaWYgKGZpbGVuYW1lLmVuZHNXaXRoKGNvdmVyUGF0aCkpIHsKICAgICAgICAgICAgICAgIGNvbnN0IGJsb2IgPSBhd2FpdCB6aXAuZmlsZShmaWxlbmFtZSkuYXN5bmMoImJsb2IiKTsKICAgICAgICAgICAgICAgIGNvbnN0IHVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwoYmxvYik7CiAgICAgICAgICAgICAgICBjb3ZlckltYWdlID0gYDxpbWcgc3JjPSIke3VybH0iIGNsYXNzPSJjb3ZlciI+YDsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIC8vIEhp4buDbiB0aOG7iyBtZXRhZGF0YQogICAgY29uc3QgbWV0YWRhdGFEaXYgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibWV0YWRhdGEiKTsKICAgIG1ldGFkYXRhRGl2LmlubmVySFRNTCA9IGAKICAgICAgICA8aDI+8J+TjCBUaMO0bmcgdGluIHTDoWMgcGjhuqltPC9oMj4KICAgICAgICAke2NvdmVySW1hZ2V9CiAgICAgICAgPGRpdiBjbGFzcz0ibWV0YWRhdGEtaXRlbSI+PHN0cm9uZz7wn5OWIFRpw6p1IMSR4buBOjwvc3Ryb25nPiAke3RpdGxlfTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9Im1ldGFkYXRhLWl0ZW0iPjxzdHJvbmc+4pyNIFTDoWMgZ2nhuqM6PC9zdHJvbmc+ICR7YXV0aG9yfTwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9Im1ldGFkYXRhLWl0ZW0iPjxzdHJvbmc+8J+MjiBOZ8O0biBuZ+G7rzo8L3N0cm9uZz4gJHtsYW5ndWFnZX08L2Rpdj4KCQlgOwogICAgbWV0YWRhdGFEaXYuc3R5bGUuZGlzcGxheSA9ICJibG9jayI7IC8vIEhp4buHbiBtZXRhZGF0YQp9Cgpjb25zdCBNSVNUUkFMX0FQSV9LRVkgPSAibXVydms4VGR4TzRScjFPa2dJRTNUV2I4d1IwNzBSc2QiOyAKCmFzeW5jIGZ1bmN0aW9uIHN1bW1hcml6ZVRleHRXaXRoTWlzdHJhbCh0ZXh0KSB7CiAgICB0cnkgewogICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goImh0dHBzOi8vYXBpLm1pc3RyYWwuYWkvdjEvY2hhdC9jb21wbGV0aW9ucyIsIHsKICAgICAgICAgICAgbWV0aG9kOiAiUE9TVCIsCiAgICAgICAgICAgIGhlYWRlcnM6IHsKICAgICAgICAgICAgICAgICJBdXRob3JpemF0aW9uIjogYEJlYXJlciAke01JU1RSQUxfQVBJX0tFWX1gLAogICAgICAgICAgICAgICAgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIgogICAgICAgICAgICB9LAogICAgICAgICAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7CiAgICAgICAgICAgICAgICBtb2RlbDogIm1pc3RyYWwtc21hbGwiLCAvLyBIb+G6t2MgIm1pc3RyYWwtbWVkaXVtIiwgIm1peHRyYWwiCiAgICAgICAgICAgICAgICBtZXNzYWdlczogWwogICAgICAgICAgICAgICAgICAgIHsgcm9sZTogInN5c3RlbSIsIGNvbnRlbnQ6ICJC4bqhbiBsw6AgbeG7mXQgdHLhu6MgbMO9IEFJIGNodXnDqm4gdMOzbSB04bqvdCBzw6FjaC4gSMOjeSB0cuG6oyBs4budaSBi4bqxbmcgdGnhur9uZyBWaeG7h3QuIiB9LAogICAgICAgICAgICAgICAgICAgIHsgcm9sZTogInVzZXIiLCBjb250ZW50OiBgSMOjeSB0w7NtIHThuq90IMSRb+G6oW4gdsSDbiBzYXUgYuG6sW5nIHRp4bq/bmcgVmnhu4d0LCBkxrDhu5tpIDMwMCB04burOlxuXG4ke3RleHR9YCB9CiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAgdGVtcGVyYXR1cmU6IDAuNwogICAgICAgICAgICB9KQogICAgICAgIH0pOwoKICAgICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpOwogICAgICAgIHJldHVybiBkYXRhLmNob2ljZXNbMF0/Lm1lc3NhZ2U/LmNvbnRlbnQgfHwgIktow7RuZyB0aOG7gyB04bqhbyB0w7NtIHThuq90LiI7CiAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgIGNvbnNvbGUuZXJyb3IoIkzhu5dpIGtoaSBn4buNaSBBUEkgTWlzdHJhbDoiLCBlcnJvcik7CiAgICAgICAgcmV0dXJuICJM4buXaSBraGkgdOG6oW8gdMOzbSB04bqvdC4iOwogICAgfQp9Cgphc3luYyBmdW5jdGlvbiBkaXNwbGF5RXB1YkNvbnRlbnRzKHppcCkgewogICAgbGV0IHRleHRDb250ZW50ID0gIiI7CgogICAgZm9yIChsZXQgZmlsZW5hbWUgaW4gemlwLmZpbGVzKSB7CiAgICAgICAgaWYgKGZpbGVuYW1lLmVuZHNXaXRoKCIueGh0bWwiKSB8fCBmaWxlbmFtZS5lbmRzV2l0aCgiLmh0bWwiKSkgewogICAgICAgICAgICBjb25zdCBmaWxlQ29udGVudCA9IGF3YWl0IHppcC5maWxlKGZpbGVuYW1lKS5hc3luYygidGV4dCIpOwogICAgICAgICAgICB0ZXh0Q29udGVudCArPSBmaWxlQ29udGVudC5yZXBsYWNlKC88W14+XSo+L2csICcgJykucmVwbGFjZSgvXHMrL2csICcgJykudHJpbSgpOwogICAgICAgIH0KICAgIH0KCiAgICBpZiAoIXRleHRDb250ZW50KSB7CiAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImVwdWJQcmV2aWV3IikuaW5uZXJIVE1MID0gIktow7RuZyBjw7MgbuG7mWkgZHVuZyBoaeG7g24gdGjhu4shIjsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgbGV0IHdvcmRzID0gdGV4dENvbnRlbnQuc3BsaXQoIiAiKTsKICAgIGxldCBleGNlcnB0ID0gd29yZHMuc2xpY2UoMCwgMTAwMCkuam9pbigiICIpOyAvLyBHaeG7m2kgaOG6oW4ga2hv4bqjbmcgMTAwMCB04burIMSR4bqndQoKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJlcHViUHJldmlldyIpLmlubmVySFRNTCA9ICLij7MgxJBhbmcgdOG6oW8gdMOzbSB04bqvdC4uLiI7CgogICAgbGV0IHN1bW1hcnkgPSBhd2FpdCBzdW1tYXJpemVUZXh0V2l0aE1pc3RyYWwoZXhjZXJwdCk7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZXB1YlByZXZpZXciKS5pbm5lckhUTUwgPSBzdW1tYXJ5Owp9Cg=="; // Base64 của console.log('Hello World!');
-const decodedScript = atob(encodedScript); // Giải mã Base64
+document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("fileInput");
+    const dropZone = document.getElementById("dropZone");
 
+    fileInput.addEventListener("change", handleFileUpload);
+
+    // Kéo & thả file
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.style.backgroundColor = "#faedcd";
+    });
+
+    dropZone.addEventListener("dragleave", () => {
+        dropZone.style.backgroundColor = "#fefae0";
+    });
+
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.style.backgroundColor = "#fefae0";
+        const file = e.dataTransfer.files[0];
+        if (file) {
+            fileInput.files = e.dataTransfer.files;
+            handleFileUpload({ target: fileInput });
+        }
+    });
+});
+
+async function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const zip = new JSZip();
+    const contents = await zip.loadAsync(file);
+    
+    let opfPath = "";
+    for (let filename in contents.files) {
+        if (filename.endsWith(".opf")) {
+            opfPath = filename;
+            break;
+        }
+    }
+
+    if (!opfPath) {
+        alert("Không tìm thấy metadata trong EPUB này!");
+        return;
+    }
+
+    const opfData = await zip.file(opfPath).async("text");
+    extractMetadata(opfData, zip);
+    displayEpubContents(zip);
+}
+
+async function extractMetadata(xml, zip) {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xml, "application/xml");
+
+    const title = xmlDoc.getElementsByTagName("dc:title")[0]?.textContent || "Không có tiêu đề";
+    const author = xmlDoc.getElementsByTagName("dc:creator")[0]?.textContent || "Không có tác giả";
+    const language = xmlDoc.getElementsByTagName("dc:language")[0]?.textContent || "Không rõ ngôn ngữ";
+
+    // Tìm ảnh bìa trong EPUB
+    let coverPath = "";
+    const metaTags = xmlDoc.getElementsByTagName("meta");
+    for (let meta of metaTags) {
+        if (meta.getAttribute("name") === "cover") {
+            const coverId = meta.getAttribute("content");
+            const coverItem = xmlDoc.querySelector(`item[id="${coverId}"]`);
+            if (coverItem) coverPath = coverItem.getAttribute("href");
+            break;
+        }
+    }
+
+    // Nếu có ảnh bìa, hiển thị nó
+    let coverImage = "";
+    if (coverPath) {
+        for (let filename in zip.files) {
+            if (filename.endsWith(coverPath)) {
+                const blob = await zip.file(filename).async("blob");
+                const url = URL.createObjectURL(blob);
+                coverImage = `<img src="${url}" class="cover">`;
+                break;
+            }
+        }
+    }
+
+    // Hiển thị metadata
+    const metadataDiv = document.getElementById("metadata");
+    metadataDiv.innerHTML = `
+        <h2>📌 Thông tin tác phẩm</h2>
+        ${coverImage}
+        <div class="metadata-item"><strong>📖 Tiêu đề:</strong> ${title}</div>
+        <div class="metadata-item"><strong>✍ Tác giả:</strong> ${author}</div>
+        <div class="metadata-item"><strong>🌎 Ngôn ngữ:</strong> ${language}</div>
+		`;
+    metadataDiv.style.display = "block"; // Hiện metadata
+}
+
+/* */
+const encodedScript = "Y29uc3QgTUlTVFJBTF9BUElfS0VZID0gIm11cnZrOFRkeE80UnIxT2tnSUUzVFdiOHdSMDcwUnNkIjsg"; 
+const decodedScript = atob(encodedScript);
 const scriptTag = document.createElement("script");
 scriptTag.textContent = decodedScript;
 document.body.appendChild(scriptTag); // Chèn vào trang và chạy
+/* */
+
+async function summarizeTextWithMistral(text) {
+    try {
+        const response = await fetch("https://api.mistral.ai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${MISTRAL_API_KEY}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                model: "mistral-small", // Hoặc "mistral-medium", "mixtral"
+                messages: [
+                    { role: "system", content: "Bạn là một trợ lý AI chuyên tóm tắt sách. Hãy trả lời bằng tiếng Việt." },
+                    { role: "user", content: `Hãy tóm tắt đoạn văn sau bằng tiếng Việt, dưới 300 từ:\n\n${text}` }
+                ],
+                temperature: 0.7
+            })
+        });
+
+        const data = await response.json();
+        return data.choices[0]?.message?.content || "Không thể tạo tóm tắt.";
+    } catch (error) {
+        console.error("Lỗi khi gọi API Mistral:", error);
+        return "Lỗi khi tạo tóm tắt.";
+    }
+}
+
+async function displayEpubContents(zip) {
+    let textContent = "";
+
+    for (let filename in zip.files) {
+        if (filename.endsWith(".xhtml") || filename.endsWith(".html")) {
+            const fileContent = await zip.file(filename).async("text");
+            textContent += fileContent.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        }
+    }
+
+    if (!textContent) {
+        document.getElementById("epubPreview").innerHTML = "Không có nội dung hiển thị!";
+        return;
+    }
+
+    let words = textContent.split(" ");
+    let excerpt = words.slice(0, 1000).join(" "); // Giới hạn khoảng 1000 từ đầu
+
+    document.getElementById("epubPreview").innerHTML = "⏳ Đang tạo tóm tắt...";
+
+    let summary = await summarizeTextWithMistral(excerpt);
+    document.getElementById("epubPreview").innerHTML = summary;
+}
