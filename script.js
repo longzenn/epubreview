@@ -93,6 +93,9 @@ async function extractMetadata(xml, zip) {
         <div class="metadata-item"><strong>🌎 Ngôn ngữ:</strong> ${language}</div>
 		`;
     metadataDiv.style.display = "block"; // Hiện metadata
+
+    const reviewDiv = document.getElementById("review");
+    reviewDiv.style.display = "block"; // Hiện review
 }
 
 /* */
