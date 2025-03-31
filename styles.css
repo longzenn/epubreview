@@ -79,6 +79,10 @@ h1 {
     border-bottom: 1px solid #ff99c8;
 }
 
+#review {
+    display: none;
+}
+
 /* Nội dung EPUB */
 #epubPreview {
     background: #fff;
